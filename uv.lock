@@ -1,0 +1,23 @@
+version = 1
+revision = 2
+requires-python = ">=3.11"
+
+[[package]]
+name = "openweathermap"
+version = "0.1.4"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/61/9a/d7785e085565e25c604470d645443c14db0541c593e05e106dd9029e8210/openweathermap-0.1.4.tar.gz", hash = "sha256:b17c05944ca6cc634562bde0c52633605712afcf2e4615bc8704cf997f4fc6e3", size = 2754, upload-time = "2022-09-07T15:18:53.514Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/86/11/b5e1fd7442bc5875c10ed2281562cb77636e14bf594e1f65d2632716b27b/openweathermap-0.1.4-py3-none-any.whl", hash = "sha256:b00d0dbbbb997d1b5f76f1feb583e4f57fb6e906d9e15adbc48db57d2b415612", size = 3186, upload-time = "2022-09-07T15:18:46.11Z" },
+]
+
+[[package]]
+name = "weather"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "openweathermap" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "openweathermap", specifier = ">=0.1.4" }]
